@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class arrayCreator {
+public class ArrayCreator {
 
-    public static ArrayList ListCreator(int limit, ArrayList<int> myList) {
+    public static ArrayList ListCreator(int limit, ArrayList<Integer> myList) {
 
         int randomNum;
 
@@ -13,7 +13,7 @@ public class arrayCreator {
 
         }
 
-
+        return myList;
 
 
 
