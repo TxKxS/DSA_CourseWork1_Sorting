@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import javafx.application.Application;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) {
 
@@ -240,7 +241,8 @@ public class Main {
             System.out.println((i +1 ) + ". Average time taken is: " + arrMergeSortedTimer[i] + " nanoseconds. (~ " + arrMergeSortedTimer[i]/1000000 + " ms)");
         }
 
-
+        chartPlotter.setData(arrISTimer, arrMSTimer, arrInsertionSortedTimer);
+        Application.launch(chartPlotter.class, new String[0]); //launches the compiled code
 
     }
 
