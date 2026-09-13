@@ -35,6 +35,7 @@ public class Main {
 
         //System.out.println(myList); //Testing purposes
 
+        ///storing time taken rather than sorted list to get a more accurate result as returning a longer list could end up taking more time
         arrTimer[0] = insertionSort.insertionSort(my500List);
         arrTimer[1] = insertionSort.insertionSort(my1000List);
         arrTimer[2] = insertionSort.insertionSort(my2000List);

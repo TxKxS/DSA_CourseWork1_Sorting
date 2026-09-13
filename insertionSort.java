@@ -1,29 +1,33 @@
-public static long insertionSort(ArrayList<Integer> myList){
+import java.util.ArrayList;
 
+public class insertionSort {
 
-    int i, j, tempNum;
+    public static long insertionSort(ArrayList<Integer> myList) {
 
+        int i, j, tempNum;
 
-    System.out.println("Starting timer");
-    long start = System.nanoTime();
+        //Starting stopwatch in the insertion sort to get more accurate results
+        System.out.println("Starting timer");
+        long start = System.nanoTime();
 
-    //Starting at 2nd location as will be comparing backwards
-    for(i = 1; i < myList.size(); i++) {
-        tempNum = myList.get(i); //temporarily storing it
-        j = i -1; //Cheking the previous one
-        while (j >= 0  && tempNum > myList.get(j + 1)) {
-            myList.set((j+1), myList.get(j)); // moving the element one position down
-            j--;
+        //Starting at 2nd location as will be comparing backwards
+        for (i = 1; i < myList.size(); i++) {
+            tempNum = myList.get(i); //temporarily storing it
+            j = i - 1; //Cheking the previous one
+            while (j >= 0 && tempNum > myList.get(j)) {
+                myList.set((j + 1), myList.get(j)); // moving the element one position down
+                j--;
+            }
+            myList.set(j + 1, tempNum); //inserting the number back again
+
         }
-        myList.set(j+1, tempNum); //inserting the number back again
+        long end = System.nanoTime();
+
+        //obtaining the time taken
+        long duration = end - start;
+        System.out.println("Timer ended. Time took is: " + duration + " nanoseconds");
+
+        return duration;
 
     }
-    long end = System.nanoTime();
-
-    long duration = end - start;
-    System.out.println("Timer ended. Time took is: " + duration + " nanoseconds");
-
-    return duration;
-
-
 }
