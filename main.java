@@ -12,7 +12,7 @@ public class Main {
         //Merge Sort Varables
         long arrMSTimer[] = new long[5];
         long arrMergeSortedTimer[] = new long[5];
-        long start, end;
+        long start, end, duration;
 
 
 
@@ -76,7 +76,7 @@ public class Main {
 
         }
 
-        //Insertion Sort
+        //Merge Sort
 
         System.out.println("Creaing list for Merge Sort now");
         for (int i = 0; i < 5; i++) {
@@ -109,8 +109,9 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(my500List);
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMSTimer[0] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMSTimer[0]/1000000 + " ms)");
+            duration =  end - start;
+            arrMSTimer[0] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             System.out.println("\nSorting already sorted list:");
             System.out.println("\nStarting stopwatch");
@@ -118,8 +119,9 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMergeSortedTimer[0] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMergeSortedTimer[0]/1000000 + " ms)");
+            duration =  end - start;
+            arrMergeSortedTimer[0] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             //second list of 1000
             System.out.println("\nUnsorted list:");
@@ -128,8 +130,9 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(my1000List);
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMSTimer[1] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMSTimer[1]/1000000 + " ms)");
+            duration =  end - start;
+            arrMSTimer[1] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             System.out.println("\nSorting already sorted list:");
             System.out.println("\nStarting stopwatch");
@@ -137,8 +140,9 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMergeSortedTimer[1] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMergeSortedTimer[1]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMergeSortedTimer[1] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             //third list of 2000
             System.out.println("\nUnsorted list:");
@@ -147,8 +151,9 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(my2000List);
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMSTimer[2] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMSTimer[2]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMSTimer[2] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             System.out.println("\nSorting already sorted list:");
             System.out.println("\nStarting stopwatch");
@@ -156,18 +161,20 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMergeSortedTimer[2] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMergeSortedTimer[2]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMergeSortedTimer[2] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             //fourth list of 4000
             System.out.println("\nUnsorted list:");
             System.out.println("\nStarting stopwatch");
             start = System.nanoTime();
-            globals.sortedList = mergeSort.mergeSort(my500List);
+            globals.sortedList = mergeSort.mergeSort(my4000List);
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMSTimer[3] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMSTimer[3]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMSTimer[3] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             System.out.println("\nSorting already sorted list:");
             System.out.println("\nStarting stopwatch");
@@ -175,18 +182,20 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMergeSortedTimer[3] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMergeSortedTimer[3]/1000000 + " ms)");
+            duration = end - start;
+            arrMergeSortedTimer[3] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             //five list of 8000
             System.out.println("\nUnsorted list:");
             System.out.println("\nStarting stopwatch");
             start = System.nanoTime();
-            globals.sortedList = mergeSort.mergeSort(my500List);
+            globals.sortedList = mergeSort.mergeSort(my8000List);
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMSTimer[4] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMSTimer[4]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMSTimer[4] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
             System.out.println("\nSorting already sorted list:");
             System.out.println("\nStarting stopwatch");
@@ -194,16 +203,17 @@ public class Main {
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array
             end = System.nanoTime();
             System.out.println("Stopwatch stopped ");
-            arrMergeSortedTimer[4] += (end - start);
-            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + arrMergeSortedTimer[4]/1000000 + " ms)");
+            duration  =  end - start;
+            arrMergeSortedTimer[4] += duration;
+            System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
         }
 
 
         //Final Results
 
-        System.out.println("Insertion sort - O(n^2)");
-        System.out.println("\nFindings: (Unsorted Random Numbers)");
+        System.out.println("\nInsertion sort - O(n^2)");
+        System.out.println("Findings: (Unsorted Random Numbers)");
         for (int i = 0; i < 5; i++) {
             arrISTimer[i] /= 5;
             System.out.println((i +1 ) + ". Average time taken is: " + arrISTimer[i] + " nanoseconds. (~ " + arrISTimer[i]/1000000 + " ms)");
@@ -214,8 +224,8 @@ public class Main {
             System.out.println((i +1 ) + ". Average time taken is: " + arrInsertionSortedTimer[i] + " nanoseconds. (~ " + arrInsertionSortedTimer[i]/1000000 + " ms)");
         }
 
-        System.out.println("Merge sort - O(n log n)");
-        System.out.println("\nFindings: (Unsorted Random Numbers)");
+        System.out.println("\nMerge sort - O(n log n)");
+        System.out.println("Findings: (Unsorted Random Numbers)");
         for (int i = 0; i < 5; i++) {
             arrMSTimer[i] /= 5;
             System.out.println((i +1 ) + ". Average time taken is: " + arrMSTimer[i] + " nanoseconds. (~ " + arrMSTimer[i]/1000000 + " ms)");
