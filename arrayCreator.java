@@ -6,6 +6,8 @@ public class arrayCreator {
 
         int randomNum;
 
+        myList.clear();
+
         for (int i = 0; i < limit; i++) {
 
             randomNum = (int)(Math.random() * 1000 ); //To get a more spread data

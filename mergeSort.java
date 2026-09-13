@@ -11,6 +11,9 @@ public class mergeSort {
             ArrayList<Integer> left = new ArrayList<>(unsortedList.subList(0 , mid)); //mid is not inclusive
             ArrayList<Integer> right = new ArrayList<>(unsortedList.subList(mid , unsortedList.size())); //mid is inclusize at the start
 
+            mergeSort(left);
+            mergeSort(right);
+
             return merge(left, right);
 
 
