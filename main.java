@@ -23,6 +23,10 @@ public class Main {
         ArrayList<Integer> my4000List = new ArrayList<>();
         ArrayList<Integer> my8000List = new ArrayList<>();
 
+        // warmup to remove jmv timimg
+        mergeSort.mergeSort(arrayCreator.ListCreator(500, new ArrayList<>()));
+        insertionSort.insertionSort(arrayCreator.ListCreator(500, new ArrayList<>()));
+
         //Insertion Sort O(n^2)
 
         System.out.println("Creaing list for insertion sort");

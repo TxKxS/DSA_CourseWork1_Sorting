@@ -40,11 +40,8 @@ public class mergeSort {
         }
 
         //One of the lists will not be empty
-        if (left.size() != 0 || right.size() != 0) {
-            //since one of them is empty, there won't be any erros, left overs will be added to the merged list
-            mergedList.addAll(left);
-            mergedList.addAll(right);
-        }
+        while (i < left.size()) {mergedList.add(left.get(i++));}
+        while (j < right.size()) {mergedList.add(right.get(j++));}
 
         return mergedList;
 
