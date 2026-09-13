@@ -1,0 +1,29 @@
+public static long insertionSort(ArrayList<Integer> myList){
+
+
+    int i, j, tempNum;
+
+
+    System.out.println("Starting timer");
+    long start = System.nanoTime();
+
+    //Starting at 2nd location as will be comparing backwards
+    for(i = 1; i < myList.size(); i++) {
+        tempNum = myList.get(i); //temporarily storing it
+        j = i -1; //Cheking the previous one
+        while (j >= 0  && tempNum > myList.get(j + 1)) {
+            myList.set((j+1), myList.get(j)); // moving the element one position down
+            j--;
+        }
+        myList.set(j+1, tempNum); //inserting the number back again
+
+    }
+    long end = System.nanoTime();
+
+    long duration = end - start;
+    System.out.println("Timer ended. Time took is: " + duration + " nanoseconds");
+
+    return duration;
+
+
+}

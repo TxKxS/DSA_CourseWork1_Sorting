@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class ArrayCreator {
+public class arrayCreator {
 
-    public static ArrayList ListCreator(int limit, ArrayList<Integer> myList) {
+    public static ArrayList<Integer> ListCreator(int limit, ArrayList<Integer> myList) {
 
         int randomNum;
 
