@@ -14,7 +14,7 @@ public class insertionSort {
         for (i = 1; i < myList.size(); i++) {
             tempNum = myList.get(i); //temporarily storing it
             j = i - 1; //Cheking the previous one
-            while (j >= 0 && tempNum > myList.get(j)) {
+            while (j >= 0 && tempNum < myList.get(j)) {
                 myList.set((j + 1), myList.get(j)); // moving the element one position down
                 j--;
             }

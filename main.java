@@ -78,10 +78,10 @@ public class Main {
 
         //Merge Sort
 
-        System.out.println("Creaing list for Merge Sort now");
+        System.out.println("\nCreaing list for Merge Sort now");
         for (int i = 0; i < 5; i++) {
 
-            System.out.println("Run number: " + (i + 1) );
+            System.out.println("\nRun number: " + (i + 1) );
 
             System.out.println("\nCreating array of 500 elements\n");
             my500List = arrayCreator.ListCreator(500, my500List);
@@ -113,7 +113,7 @@ public class Main {
             arrMSTimer[0] += duration;
             System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
-            System.out.println("\nSorting already sorted list:");
+            System.out.println("\nSorting sorted list:");
             System.out.println("\nStarting stopwatch");
             start = System.nanoTime();
             globals.sortedList = mergeSort.mergeSort(globals.sortedList); //Finding time for sorted array

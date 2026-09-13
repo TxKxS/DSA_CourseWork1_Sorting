@@ -26,16 +26,15 @@ public class mergeSort {
     private static ArrayList<Integer> merge(ArrayList<Integer> left,ArrayList<Integer> right ) {
 
         ArrayList<Integer> mergedList = new ArrayList<>();
+        int i = 0, j=0;
 
         //adding the smaller to the merged list and removing the item from the list
-        while (left.size() != 0 && right.size() != 0) {
+        while (i < left.size() && j < right.size()) {
 
-            if (left.get(0) < right.get(0)) {
-                mergedList.add(left.get(0));
-                left.remove(0);
+            if (left.get(i) < right.get(j)) {
+                mergedList.add(left.get(i++));
             } else {
-                mergedList.add(right.get(0));
-                right.remove(0);
+                mergedList.add(right.get(j++));
             }
 
         }
