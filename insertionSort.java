@@ -7,7 +7,7 @@ public class insertionSort {
         int i, j, tempNum;
 
         //Starting stopwatch in the insertion sort to get more accurate results
-        System.out.println("Starting timer");
+        System.out.println("\nStarting stopwatch");
         long start = System.nanoTime();
 
         //Starting at 2nd location as will be comparing backwards
@@ -25,7 +25,8 @@ public class insertionSort {
 
         //obtaining the time taken
         long duration = end - start;
-        System.out.println("Timer ended. Time took is: " + duration + " nanoseconds");
+        System.out.println("Stopwatch stopped ");
+        System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
         return duration;
 

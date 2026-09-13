@@ -8,7 +8,7 @@ public class arrayCreator {
 
         for (int i = 0; i < limit; i++) {
 
-            randomNum = (int)(Math.random() * 1000 );
+            randomNum = (int)(Math.random() * 1000 ); //To get a more spread data
             myList.add(randomNum);
 
         }
