@@ -6,7 +6,7 @@ public class Main {
 
         //'long' as it will be used to measure time in nanoseconds
         long arrTimer[] = new long[5];
-
+        long arrSortedTimer[] = new long[5];
 
         //my different arrays to be sorted
         ArrayList<Integer> my500List = new ArrayList<>();
@@ -38,18 +38,44 @@ public class Main {
             //System.out.println(myList); //Testing purposes
 
             ///storing time taken rather than sorted list to get a more accurate result as returning a longer list could end up taking more time
+            System.out.println("\nUnsorted list:");
             arrTimer[0] += insertionSort.insertionSort(my500List);
+            System.out.println("\nSorting already sorted list:");
+            arrSortedTimer[0] += insertionSort.insertionSort(globals.sortedList); //Finding time for sorted array
+
+            System.out.println("\nUnsorted list:");
             arrTimer[1] += insertionSort.insertionSort(my1000List);
+            System.out.println("\nSorting already sorted list:");
+            arrSortedTimer[1] += insertionSort.insertionSort(globals.sortedList); //Finding time for sorted array
+
+            System.out.println("\nUnsorted list:");
             arrTimer[2] += insertionSort.insertionSort(my2000List);
+            System.out.println("\nSorting already sorted list:");
+            arrSortedTimer[2] += insertionSort.insertionSort(globals.sortedList); //Finding time for sorted array
+
+            System.out.println("\nUnsorted list:");
             arrTimer[3] += insertionSort.insertionSort(my4000List);
+            System.out.println("\nSorting already sorted list:");
+            arrSortedTimer[3] += insertionSort.insertionSort(globals.sortedList); //Finding time for sorted array
+
+            System.out.println("\nUnsorted list:");
             arrTimer[4] += insertionSort.insertionSort(my8000List);
+            System.out.println("\nSorting already sorted list:");
+            arrSortedTimer[4] += insertionSort.insertionSort(globals.sortedList); //Finding time for sorted array
 
         }
 
+        System.out.println("\nFindings: (Unsorted Random Numbers)");
         for (int i = 0; i < 5; i++) {
             arrTimer[i] /= 5;
             System.out.println((i +1 ) + ". Average time taken is: " + arrTimer[i] + " nanoseconds. (~ " + arrTimer[i]/1000000 + " ms)");
         }
+        System.out.println("\nFindings: (Sorted Numbers)");
+        for (int i = 0; i < 5; i++) {
+            arrSortedTimer[i] /= 5;
+            System.out.println((i +1 ) + ". Average time taken is: " + arrSortedTimer[i] + " nanoseconds. (~ " + arrSortedTimer[i]/1000000 + " ms)");
+        }
+
 
     }
 

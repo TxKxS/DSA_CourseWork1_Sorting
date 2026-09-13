@@ -28,6 +28,9 @@ public class insertionSort {
         System.out.println("Stopwatch stopped ");
         System.out.println("Time took is: " + duration + " nanoseconds. (~ " + duration/1000000 + " ms)");
 
+        globals.sortedList.clear(); //emptying sorted array in globals
+        globals.sortedList.addAll(myList); //assigning the sorted arraylist to globals.sortedList
+
         return duration;
 
     }
